@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "24.0.0 rc2"
-
     defaultConfig {
         applicationId "site.elclima"
         minSdkVersion 16
@@ -17,9 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    buildTypes.each{
+    buildTypes.each {
         it.buildConfigField 'String', 'OPEN_WEATHER_MAP_APY_KEY', "\"d885b5ff6bdcc828a9a78560d7c65166\""
+    }
+    productFlavors {
     }
 }
 
